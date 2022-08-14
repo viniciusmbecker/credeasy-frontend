@@ -40,6 +40,7 @@
 <script>
 import CabecalhoLogado from "./CabecalhoLogado.vue";
 import CabecalhoDeslogado from "./CabecalhoDeslogado.vue";
+import store from "../store";
 
 export default {
     components: {
@@ -48,7 +49,7 @@ export default {
     },
     computed: {
         usuarioestaLogado () {
-            return Boolean(sessionStorage.getItem('API_TOKEN'))
+            return Boolean(store.state.token)
         }
     }
 }

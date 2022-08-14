@@ -1,4 +1,5 @@
 import axios from 'axios';
+import store from '../store';
 
 const http = axios.create({
     baseURL: 'http://localhost:8000/',
@@ -9,8 +10,12 @@ const http = axios.create({
 });
 
 http.interceptors.request.use(function(config) {
-    let token = sessionStorage.getItem('API_TOKEN');
-    config.headers.Authorization = `Bearer ${token}`;
+    let token = store.state.token;
+
+    if (token) {
+      config.headers.Authorization = `Bearer ${token}`;
+    }
+    
     return config;
   }, function(erro) {
     console.log(`Deu erro ${erro.response}`);

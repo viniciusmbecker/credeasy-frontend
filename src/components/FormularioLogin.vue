@@ -16,6 +16,7 @@
     import { useField, useForm } from 'vee-validate';
     import axios from "axios";
     import router from "../router";
+    import store from "../store";
 
     const schema = yup.object({
         cpf: yup.string().required().min(14),
@@ -27,14 +28,11 @@
     });
 
     const fazLogin = handleSubmit(credenciais => {
-        console.log('submeteu', credenciais);
-
-        axios.post('http://localhost:8000/api/login', credenciais)
-            .then(resposta => {
-                sessionStorage.setItem('API_TOKEN', resposta.data.token)
-                router.push({ name: 'home'});
-            })
-            .catch(erro => console.log(erro)); 
+        store.dispatch('fazLogin', credenciais)
+        .then(() => {
+            router.push({ name: 'home'});
+        })
+        .catch(erro => console.log(erro)); 
     });
     
     

@@ -16,6 +16,7 @@
     "vue": "^3.2.37",
     "vue-ico": "^1.0.15",
     "vue-router": "^4.1.2",
+    "vuex": "^4.0.2",
     "yup": "^0.32.11"
   },
   "devDependencies": {

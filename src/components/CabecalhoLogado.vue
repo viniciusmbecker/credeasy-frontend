@@ -11,10 +11,11 @@
 </template>
 
 <script>
+import store from '../store';
 export default {
     methods: {
         fazLogout () {
-            sessionStorage.removeItem('API_TOKEN')
+            store.commit('DESLOGAR_USUARIO')
             router.push( {name: 'home'})
         }
     }
