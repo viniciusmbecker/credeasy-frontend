@@ -1,0 +1,283 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Domine:wght@600;700;800&display=swap');
+
+:root {
+    --nav-link: #A5ACAF;
+    --nav-active-link: #fff;
+    --verde: #69BE28;
+    --azul: #002244;
+    --border-radius: 4px;
+    --shadow: 0px 4px 60px rgba(0, 0, 0, 0.14);
+}
+
+body {
+    font-family: "poppins", sans-serif;
+    line-height: 1.7;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: "Domine", sans-serif;
+    font-weight: 700;
+    color: var(--azul);
+}
+
+/****************************************/ 
+/*              CABEÇALHO               */
+/****************************************/
+
+.navbar {
+    background-color: var(--azul); 
+}
+
+/****************************************/ 
+/*             SEÇÃO HOME2              */
+/****************************************/
+
+#home2 {
+    text-align: center;
+    display: flex;
+    align-items: center;
+}
+
+#home2 {
+    padding-top: 5rem;
+}
+
+.home2-background {
+    background: var(--verde);
+}
+
+.input-group {
+    padding: 4px;
+    background-color: rgba(255, 255, 255, 0.3);
+    border-radius: var(--border-radius);
+}
+
+.input-group input {
+    border: none;
+    background-color: transparent;
+    color: white;
+}
+
+.input-group input::placeholder {
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.input-group input:focus {
+    box-shadow: none;
+}
+
+.frase {
+    color: white;
+}
+
+.icon-boxes {
+    width: 80px;
+    height: 50px;
+    background-color: var(--azul);
+    color: white;
+    border-radius: var(--border-radius);
+    font-size: 34px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+}
+
+.paragrafo {
+    padding-left: 10px;
+    color: var(--azul);
+}
+
+/****************************************/ 
+/*            SEÇÃO SOBRE               */
+/****************************************/
+
+
+#sobre {
+    padding-top: 5rem;
+    padding-bottom: 5rem; 
+} 
+ 
+.numeros {
+    text-align: center;
+}
+
+.numeros .divider {
+    width: 70px;
+    height: 2px;
+    background-color: var(--verde);
+    display: inline-block;
+    margin-top: 8px;
+    margin-bottom: 8px;
+}
+
+.section-intro {
+    margin-bottom: 35px;
+    text-align: center; 
+}
+ 
+ .section-intro p {
+    max-width: 36rem;
+    margin: auto;
+}
+
+/****************************************/ 
+/*          SEÇÃO DE DEPOIMENTOS        */
+/****************************************/
+
+#depoimentos {
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+    background: var(--azul);
+}    
+
+#depoimentos .section-intro h1,
+#depoimentos .section-intro p {
+    color: white;
+}
+
+#depoimentos .owl-dot span {
+    background-color: transparent;
+    border: 2px solid white;
+    width: 12px;
+    height: 12px;
+    transition: all 0.6s ease;
+}
+
+#depoimentos .owl-dot.active span {
+    width: 30px;
+    background-color: var(--verde);
+    border: var(--verde);
+}
+
+.person-icon-box {
+    width: 80px;
+    height: 80px;
+    background-color: var(--verde);
+    color: white;
+    border-radius: var(--border-radius);
+    font-size: 34px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+}
+
+.review {
+    padding: 34px;
+    border: 1px solid rgba(255, 255, 255, 0.21);
+    border-radius: var(--border-radius);
+}
+
+.review .stars span {
+    color: orange;
+}
+
+.review p {
+    color: rgba(255, 255, 255, 0.1);
+    margin-top: 16px;
+    margin-bottom: 16px;
+}
+
+.review h6, 
+.review small, 
+.review span {
+    color: #A5ACAF;
+}
+
+
+.clientes {
+    padding-left: 8px;
+}
+
+/****************************************/ 
+/*            SEÇÃO DE CRÉDITO          */
+/****************************************/
+
+
+#credito {
+    padding-top: 5rem;
+    padding-bottom: 5rem; 
+} 
+
+.service {
+    padding: 44px 24px;
+    text-align: center;
+}
+
+.service h5 {
+    margin-top: 28px;
+    margin-bottom: 12px;
+}
+
+.service p {
+    font-size: 14px;
+}
+
+.custom-card {
+    transition: all 0.4s ease;
+    background-color: white;
+    border-radius: var(--border-radius);
+}
+
+.custom-card:hover {
+    box-shadow: var(--shadow);
+    transform: translateY(-5px);
+}
+
+.icon-box {
+    width: 80px;
+    height: 80px;
+    background-color: var(--azul);
+    color: white;
+    border-radius: var(--border-radius);
+    font-size: 34px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+}
+
+/****************************************/ 
+/*            SEÇÃO DE CONTATO          */
+/****************************************/
+
+#contato {
+    padding-top: 5rem;
+    padding-bottom: 5rem; 
+}
+
+.form-control-custom:focus {
+    outline: 3px solid var(--verde) !important;
+}
+
+.mapa {
+    height: 100%;
+    width: 100%;
+    min-height: 400px;
+}
+
+/****************************************/ 
+/*                FOOTER                */
+/****************************************/
+
+.footer{
+    background: var(--azul);
+    color:white;
+}
+
+.newsletter{
+    color: white;
+    font-weight: 600;
+    font-size: 14px;
+}
+
+.links-footer{
+    text-decoration: none;
+    color: var(--nav-link);
+}
+
+.links-footer:hover{
+    color: var(--nav-active-link);
+}
