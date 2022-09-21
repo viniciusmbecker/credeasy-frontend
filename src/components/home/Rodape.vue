@@ -3,7 +3,7 @@
         <div class="container">
             <div class="row align-items-center">
                 <div class="col-lg-3 d-flex justify-content-center">
-                    <img src="../assets/CredEasy2.png" width="230">
+                    <img src="../../assets/CredEasy2.png" width="230">
                 </div>
                 <div class="col-lg-6 align-self-center">
                     <div class="row text-center d-flex align-items-center justify-content-around">

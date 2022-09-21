@@ -36,7 +36,7 @@
                         </div>
                     </div>
                     <div class="col-md-6 d-none d-md-block">
-                        <img class="mw-100" src="../assets/mulher-segurando-moeda.png">
+                        <img class="mw-100" src="../../assets/mulher-segurando-moeda.png">
                     </div>
                 </div>
             </div>

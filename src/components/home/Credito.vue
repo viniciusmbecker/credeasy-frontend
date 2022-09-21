@@ -75,7 +75,7 @@
 </template>
 
 <script setup>
-    import CardsComponents from "./shared/CardsComponents.vue";
+    import CardsComponents from "../shared/CardsComponents.vue";
 </script>
 
 <style scoped>

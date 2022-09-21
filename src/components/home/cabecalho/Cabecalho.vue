@@ -4,7 +4,7 @@
             <div class="container">
                     
                 <a href="#" class="">
-                    <img src="../assets/CredEasy2.png" width="220">
+                    <img src="../../../assets/CredEasy2.png" width="220">
                 </a>
 
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
@@ -38,9 +38,9 @@
 </template>
 
 <script>
-import CabecalhoLogado from "./CabecalhoLogado.vue";
-import CabecalhoDeslogado from "./CabecalhoDeslogado.vue";
-import store from "../store";
+import CabecalhoLogado from "../cabecalho/CabecalhoLogado.vue";
+import CabecalhoDeslogado from "../cabecalho/CabecalhoDeslogado.vue";
+import store from "../../../store";
 
 export default {
     components: {

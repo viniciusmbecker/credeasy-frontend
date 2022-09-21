@@ -11,12 +11,12 @@
 </template>  
 
 <script setup>
-import Cabecalho from "../../components/Cabecalho.vue";
-import Inicio from "../../components/Inicio.vue";
-import Sobre from "../../components/Sobre.vue";
-import Credito from "../../components/Credito.vue";
-import Contato from "../../components/Contato.vue";
-import Rodape from "../../components/Rodape.vue";
+import Cabecalho from "../../components/home/cabecalho/Cabecalho.vue";
+import Inicio from "../../components/home/Inicio.vue";
+import Sobre from "../../components/home/Sobre.vue";
+import Credito from "../../components/home/Credito.vue";
+import Contato from "../../components/home/Contato.vue";
+import Rodape from "../../components/home/Rodape.vue";
     $(document).ready(function(){
         $(".owl-carousel").owlCarousel();
       });
