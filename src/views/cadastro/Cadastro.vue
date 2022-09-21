@@ -10,16 +10,19 @@
             </div>
 
             <div class="col-lg-7 d-flex flex-column align-items-end min-vh-100">
-                <div class="px-lg-5 pt-lg-4 pb-lg-3 p-4 w-100 mb-auto">
+                <div class="px-lg-5 pt-lg-1 pb-lg-1 p-4 w-100 mb-auto">
                 </div>
-                <div class="px-lg-5 py-lg-4 p-4 w-100 align-self-center">
-                    <h1 class="font-weight-bold mb-4 text-center">É muito bom ter você aqui!</h1>
+                <div class="px-lg-5 py-lg-2 p-4 w-100 align-self-center">
+                    <h1 class="font-weight-bold mb-2 text-center">É muito bom ter você aqui!</h1>
                     <FormularioCadastro />
 
                 </div>
-                <div class="text-center px-lg-5 pt-lg-3 pb-lg-4 p-4 w-100 mt-auto">
-                    <!-- <p class="d-inline-block mb-0">Ainda não possui uma conta?</p>
-                <a href="#" class="text-light font-weight-bold text-decoration-none">Crie uma agora</a> -->
+                <div class="text-center px-lg-5 pt-lg-2 pb-lg-3 p-4 w-100 mt-1">
+                    <p class="d-inline-block mb-0">Já possui uma conta?
+                        <router-link class="router-link" :to="{ name: 'login' }">
+                            <a class="text-light font-weight-bold text-decoration-none">Entre agora mesmo</a>
+                        </router-link>
+                    </p>
                 </div>
             </div>
         </div>
@@ -79,9 +82,13 @@ onMounted(() => {
     background-color: var(--azul) !important;
 }
 
-h1 {
+h1, p {
     font-family: "Poppins", sans-serif;
     font-weight: 400;
     color: var(--verde);
 }
+
+.router-link {
+        text-decoration: none;
+    }
 </style>

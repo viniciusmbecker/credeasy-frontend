@@ -1,5 +1,5 @@
 <template>
-    <div class="form-floating mb-2">
+    <div class="form-floating mb-4">
         <input class="form-control border-0"
                 :type="type"
                 :id="id" 
