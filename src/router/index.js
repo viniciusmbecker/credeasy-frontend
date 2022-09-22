@@ -11,6 +11,7 @@ import Dashboard from "@/views/cliente/Dashboard.vue";
 import Profile from "@/views/cliente/Profile.vue";
 import Settings from "@/views/cliente/Settings.vue";
 import Messages from "@/views/cliente/Messages.vue";
+import DashboardGestor from "@/views/gestor/DashboardGestor.vue";
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -34,6 +35,11 @@ const router = createRouter({
       path: '/dashboard',
       name: 'dashboard',
       component: Dashboard
+    },
+    {
+      path: '/dashboard-gestor',
+      name: 'dashboard-gestor',
+      component: DashboardGestor
     },
     {
       path: '/solicitacao',

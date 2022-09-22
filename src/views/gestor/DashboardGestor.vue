@@ -1,12 +1,13 @@
 <template>
     <div class="app">
-        <Sidebar /> 
+        <SidebarGestor /> 
         <div class="main">
             <div class="row">
 			    <h1 class="mb-2">Dashboard</h1>
 		    </div>
             <hr> 
-            <div class="container">  
+            <div class="container"> 
+                <CardsGestor /> 
                 <CardsDashboard />
                 <TabelaDashboard />
             </div> 
@@ -15,11 +16,11 @@
 </template>
 
 <script setup>
-
-import Sidebar from "../../components/sidebar/Sidebar.vue";
 import CardsDashboard from "../../components/CardsDashboard.vue";
 import TabelaDashboard from "../../components/TabelaDashboard.vue";
-    
+import CardsGestor from "../../components/CardsGestor.vue";
+import SidebarGestor from "../../components/sidebar/SidebarGestor.vue";
+        
 </script>
 
 <style lang="scss">

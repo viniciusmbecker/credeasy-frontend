@@ -1,11 +1,15 @@
 <template>
         <ul class="navbar-nav ms-auto align-items-lg-center">
             <li class="nav-item d-flex justify-content-center">
-                <a href="#" class="nav-link d-block btn ms-1 mb-2 mb-lg-0 cor-btn-nav px-2">Meu Dashboard</a>
+                <router-link class="router-link" :to="{ name: 'dashboard'}">
+                    <a class="nav-link d-block btn ms-1 mb-2 mb-lg-0 cor-btn-nav px-2">Meu Dashboard</a>
+                </router-link>
             </li>
             <li class="nav-item d-flex justify-content-center">
-                <a href="#" class="nav-link d-block btn ms-1 mb-2 mb-lg-0 cor-btn-nav px-2"
+                <router-link class="router-link" :to="{ name: 'home'}">
+                    <a class="nav-link d-block btn ms-1 mb-2 mb-lg-0 cor-btn-nav px-2"
                     @click.prevent="fazLogout">Sair</a>
+                </router-link>    
             </li>
         </ul>
 </template>
@@ -36,5 +40,9 @@ export default {
     background: var(--verde);
     color: var(--azul);
     font-weight: 700;
+}
+
+.router-link {
+    text-decoration: none;
 }
 </style>

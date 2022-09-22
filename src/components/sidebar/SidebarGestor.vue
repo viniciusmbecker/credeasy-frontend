@@ -13,7 +13,7 @@
 
         <h3>Menu</h3>
         <div class="menu">
-            <router-link class="button" to="/dashboard">
+            <router-link class="button" to="/dashboard-gestor">
                 <span class="material-icons">dashboard</span>
                 <span class="text">Meu Dashboard</span>
             </router-link>
@@ -41,7 +41,7 @@
         </div>
         <div class="flex"></div>
         <div class="menu">
-            <router-link class="button" :to="{ name: 'home'}">
+            <router-link class="button" to="/logout">
                 <span class="material-icons">logout</span>
                 <span class="text">Sair</span>
             </router-link>
