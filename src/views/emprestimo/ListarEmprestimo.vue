@@ -1,9 +1,16 @@
 <template>
-    <div class="container">
-        <div class="table-responsive mt-5">
-			<h2 class="table-title">Empréstimos</h2>
-            <table class="table table-striped text-center">
-                <thead>
+    <div class="app">
+        <Sidebar /> 
+        <div class="main">
+            <div class="row">
+			    <h1 class="mb-2">Dashboard</h1>
+		    </div>
+            <hr> 
+            <div>
+                <div class="table-responsive mt-5">
+			        <h2 class="table-title">Meus Empréstimos</h2>
+                    <table class="table table-striped text-center">
+                    <thead>
                     <tr>
                         <th>CPF</th>
                         <th>Valor</th>
@@ -11,8 +18,8 @@
                         <th>Status</th>
                         <th></th>
                     </tr>
-                </thead>
-                <tbody>
+                    </thead>
+                    <tbody>
                         <tr v-for="emprestimo of emprestimos">
                             <td>{{ emprestimo.cliente_cpf }}</td>
                             <td>{{ Intl.NumberFormat('pt-br',{style:'currency',currency:'BRL'}).format(emprestimo.valor_emprestimo) }}</td>
@@ -24,13 +31,16 @@
                                 </router-link>
                             </td>
                         </tr>
-                </tbody>
-            </table>
-        </div>        
-    </div>
+                    </tbody>
+                    </table>
+                </div>        
+            </div>
+        </div>
+    </div>            
 </template>
 
 <script setup>
+    import Sidebar from "../../components/sidebar/Sidebar.vue";
     import { ref } from 'vue';
     import http from '@/http/index.js';
 

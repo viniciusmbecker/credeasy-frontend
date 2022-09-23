@@ -3,7 +3,7 @@ import Home from "@/views/home/Home.vue";
 import Login from "@/views/login/Login.vue";
 import Solicitacao from "@/views/emprestimo/Solicitacao.vue";
 import Cadastro from "@/views/cadastro/Cadastro.vue";
-import Analise from "@/views/emprestimo/Analise.vue";
+import AnaliseEmprestimo from "@/views/gestor/AnaliseEmprestimo.vue";
 import ListarEmprestimo from "@/views/emprestimo/ListarEmprestimo.vue";
 import DetalharEmprestimo from "@/views/emprestimo/DetalharEmprestimo.vue";
 import DetalhesParcelas from "@/views/emprestimo/DetalhesParcelas.vue";
@@ -47,9 +47,9 @@ const router = createRouter({
       component: Solicitacao
     },
     {
-      path: '/analise',
-      name: 'analise',
-      component: Analise
+      path: '/analise-de-emprestimo',
+      name: 'analiseemprestimo',
+      component: AnaliseEmprestimo
     },
     {
       path: '/listar',

@@ -2,40 +2,40 @@
         <div class="row gy-4 d-flex justify-content-around bg-light mt-4 mb-4">
 			<!-------------- INÍCIO PRIMEIRO CARD ---------------->
 				<div class="col-lg-4 col-md-6">
-					<a class="router-link" href="#">
+					<router-link class="router-link" :to="{ name: 'listar'}">
 						<div class="d-flex align-items-center dashboard-card">
 							<div class="icon-box">
 								<span class="material-icons-sharp">bar_chart</span>
 							</div>
 							<h4>Meus empréstimos</h4>
 						</div>
-					</a>
+					</router-link>
 				</div>	
 			<!-------------- FINAL PRIMEIRO CARD ---------------->
         
             <!-------------- INÍCIO SEGUNDO CARD ---------------->
 				<div class="col-lg-4 col-md-6">
-					<a class="router-link" href="#">
+					<router-link class="router-link" :to="{}">
 						<div class="d-flex align-items-center dashboard-card">
 							<div class="icon-box">
 								<span class="material-icons-sharp">payments</span>
 							</div>
 							<h4>Pagar parcelas</h4>
 						</div>
-					</a>
+					</router-link>
 				</div>		
 			<!-------------- FINAL SEGUNDO CARD ---------------->
 
             <!-------------- INÍCIO TERCEIRO CARD ---------------->
 				<div class="col-lg-4 col-md-6">
-					<a class="router-link" href="#">
+					<router-link class="router-link" :to="{ name: 'solicitacao'}">
 						<div class="d-flex align-items-center dashboard-card">
 							<div class="icon-box">
 								<span class="material-icons-sharp">currency_exchange</span>
 							</div>
 							<h4>Novo empréstimo</h4>
 						</div>
-					</a>
+					</router-link>
 				</div>		
 			<!-------------- FINAL TERCEIRO CARD ---------------->
         </div>        

@@ -6,7 +6,7 @@
 			    <h1 class="mb-2">Dashboard</h1>
 		    </div>
             <hr> 
-            <div class="container">  
+            <div>  
                 <CardsDashboard />
                 <TabelaDashboard />
             </div> 
@@ -29,7 +29,7 @@ import TabelaDashboard from "../../components/TabelaDashboard.vue";
         --dark: #1e293b;
         --dark-alt: #334155;
         --light: #f1f5f9;
-        --sidebar-width: 300px;
+        --sidebar-width: 270px;
     }
     
     * {

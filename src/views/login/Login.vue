@@ -16,7 +16,6 @@
                         
                         <FormularioLogin></FormularioLogin>
 
-                        <!-- <p class="font-weight-bold text-center text-muted">Ou entre com sua conta</p> -->
                         <div class="d-flex align-items-center justify-content-center">
                             <p class="d-inline-block mb-0">Não possui uma conta?
                                 <router-link class="router-link" :to="{ name: 'cadastro' }">

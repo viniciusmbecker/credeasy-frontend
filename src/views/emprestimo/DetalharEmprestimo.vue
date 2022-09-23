@@ -1,10 +1,17 @@
 <template>
-    <div class="container mt-3">
-        <div class="table-responsive">
-            <h2 class="table-title">Detalhamento do Empréstimo</h2>
-            <table class="table align-middle table-striped table-hover text-center">
-                <thead>
-                    <tr>
+    <div class="app">
+        <Sidebar /> 
+        <div class="main">
+            <div class="row">
+			    <h1 class="mb-2">Dashboard</h1>
+		    </div>
+            <hr> 
+            <div class="mt-3">
+                <div class="table-responsive">
+                    <h2 class="table-title">Detalhamento do Empréstimo</h2>
+                    <table class="table align-middle table-striped table-hover text-center">
+                        <thead>
+                        <tr>
                         <th>ID</th>
                         <th>Valor</th>
                         <th>Taxa de Juros</th>
@@ -13,11 +20,11 @@
                         <th>Status</th>
                         <th>Data de solicitação</th>
                         <th>Data de quitação</th>
-                    </tr>
-                </thead>
+                        </tr>
+                        </thead>
                         
-                <tbody>
-                    <tr v-if="emprestimo">
+                        <tbody>
+                        <tr v-if="emprestimo">
                         <td>{{ emprestimo.id }}</td>
                         <td>{{ Intl.NumberFormat('pt-br',{style:'currency',currency:'BRL'}).format(emprestimo.valor_emprestimo) }}</td>
                         <td>{{ emprestimo.taxa_juros }}</td>
@@ -26,25 +33,27 @@
                         <td>{{ emprestimo.status_emprestimo }}</td> 
                         <td>{{ emprestimo.data_solicitacao }}</td>
                         <td>{{  }}</td>
-                    </tr>
-                </tbody>
-            </table>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div> 
+            <section>
+                <div class="container mt-2 mb-2 d-md-flex justify-content-md-end">
+                    <router-link :to="{ name: 'parcelas' }">
+                        <button class="btn btn-primary">Consultar Parcelas</button>
+                    </router-link>    
+                </div>    
+            </section> 
         </div>
-    </div> 
-        
-        <section>
-            <div class="container mt-2 mb-2 d-md-flex justify-content-md-end">
-                <router-link :to="{ name: 'parcelas' }">
-                    <button class="btn btn-primary">Consultar Parcelas</button>
-                </router-link>    
-            </div>    
-        </section>
+    </div>
 </template>
 
 <script setup>
+    import Sidebar from "../../components/sidebar/Sidebar.vue";
     import { ref } from 'vue';
     import http from '@/http/index.js';
-import { useRoute } from 'vue-router';
+    import { useRoute } from 'vue-router';
 
     const emprestimo = ref([]);
     const emprestimoId = useRoute().params.id

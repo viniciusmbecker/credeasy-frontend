@@ -3,34 +3,32 @@
 		<div class="col-md-12 mt-3">
 			<div class="table-wrapper">
 				<div class="table-responsive">
-					<h2 class="table-title">Empréstimos Recentes <a href="#" class="fs-5 fw-lighter text-light p-2">Ver Todos</a></h2>
+					<h2 class="table-title">Empréstimos Recentes
+                        <router-link class="fs-5 fw-lighter text-light p-2" :to="{ name: 'listar'}">Ver Todos</router-link>
+                    </h2>
 					<table class="table table-striped text-center">
 						<thead>
 							<tr>
 								<th>ID</th>
                                 <th>Valor</th>
                                 <th>Data de solicitação</th>
-                                <th>Nº de parcelas pagas /Nº de parcelas</th>
                                 <th>Status</th>
                                 <th></th>
 							</tr>
 						</thead>
 							
 					    <tbody>
-                            <tr>
-                                <td>1</td>
-                                <td>R$ 2.000,00</td>
-                                <td>13/06/2022</td>
-                                <td>0/6</td> 
-                                <td>APROVADO</td>
-								<td>
-								    <a class="btn btn-primary btn-sm" 
-											role="button" 
-											href={{}}>
-											Detalhes
-									</a>
-								</td>	 
-                            </tr>
+                            <tr v-for="emprestimo of emprestimos">
+                            <td>{{ emprestimo.id }}</td>
+                            <td>{{ Intl.NumberFormat('pt-br',{style:'currency',currency:'BRL'}).format(emprestimo.valor_emprestimo) }}</td>
+                            <td>{{ emprestimo.data_solicitacao }}</td>
+                            <td>{{ emprestimo.status_emprestimo }}</td>
+                            <td>
+                                <router-link :to="{ name: 'detalhar', params: { id: emprestimo.id }}">
+                                    <button>Detalhes</button>
+                                </router-link>
+                            </td>
+                        	</tr>
 						</tbody>
 					</table>
 				</div>   
@@ -39,8 +37,17 @@
     </div>    
 </template>
 
-<script>
+<script setup>
+    import { ref } from 'vue';
+    import http from '@/http/index.js';
 
+    const emprestimos = ref([]);
+
+    http.get('api/emprestimos')
+        .then(res => {
+            emprestimos.value = res.data
+        })
+        .catch(console.log) 
 </script>
 
 <style scoped>
